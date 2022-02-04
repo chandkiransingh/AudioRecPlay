@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ck.audiorecplay.RecordActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textViewDecibelNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:textSize="22sp"
+        android:layout_below="@+id/topbar"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="buttonRecord"
+        android:layout_below="@+id/textViewDecibelNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardRecord"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="4dp"
+        android:layout_below="@+id/topbar"
+        android:layout_toRightOf="@+id/textViewDecibelNumber"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp">
+
+    <ImageView
+        android:id="@+id/buttonRecord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/rec_button"
+        android:layout_below="@+id/textViewDecibelNumber"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:scaleType="fitXY"
+        />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardStop"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="4dp"
+        android:layout_below="@+id/topbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/cardRecord"
+        android:layout_marginLeft="50dp">
+
+    <ImageView
+        android:id="@+id/buttonStop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/stop_button"
+        android:layout_centerHorizontal="true"
+        android:visibility="visible"
+        android:scaleType="fitXY"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/buttonPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="buttonPlay"
+        android:layout_below="@+id/cardStop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
